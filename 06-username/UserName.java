@@ -6,13 +6,15 @@ public class UserName {
     Scanner s = new Scanner(System.in);
 
     // get String input from user
+    System.out.println("Enter your favorite number: ");
+    String favnum = s.nextLine();
     System.out.print("Enter your first name: ");
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
 
     // test output
-    System.out.println("Hello " + getInital(firstName) + "." + getInital(lastName) + ".");
+    System.out.println("Hello " + (firstName) + getInital(lastName) + (favnum));
 
     s.close();
   } // end main method
@@ -26,5 +28,4 @@ public class UserName {
   public static String getInital(String n) {
     return n.substring(0, 1);
   } // end initialize method
-
-} // end class
+}
