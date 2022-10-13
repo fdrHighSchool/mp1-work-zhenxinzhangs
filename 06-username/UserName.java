@@ -12,18 +12,18 @@ public class UserName {
     String lastName = s.nextLine();
 
     // test output
-    System.out.println("Hello " + initialize(firstName) + "." + initialize(lastName) + ".");
+    System.out.println("Hello " + getInital(firstName) + "." + getInital(lastName) + ".");
 
     s.close();
   } // end main method
 
   /*
-   * Name: initialize
+   * Name: get initial
    * Purpose: send back the first character (inital) of a name
    * Input: a name (String)
    * Return: a single character (String)
    */
-  public static String initialize(String n) {
+  public static String getInital(String n) {
     return n.substring(0, 1);
   } // end initialize method
 
