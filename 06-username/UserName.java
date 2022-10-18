@@ -21,6 +21,8 @@ public class UserName {
     if (question .equals ("teacher")){
     System.out.println("Hello " + getInital(firstName) + (lastName) + (favnum) + "@schools.nyc.gov");
     }
+    s.close();
+    generatePassword(0);
   }    // end main method
   /*
    * Name: get initial
@@ -30,5 +32,20 @@ public class UserName {
    */
   public static String getInital(String n) {
     return n.substring(0, 1);
+  }
+  public static String generatePassword(int length){
+    String password = "";
+    
+     int rand = (char)(int)(Math.random()*(90-65+1)+65);
+     char c = (char)(rand);
+     System.out.println(rand + " " + c);
+     // end initialize method
+     // purpose to send back a random String of Numbers, uppercase and lowercase letters.
+     // Input a length of passwords(int)
+     // returns a String
+     
+     
+     
+    return password;
   }
 }  
