@@ -12,13 +12,16 @@ public class UserName {
     String firstName = s.nextLine();
     System.out.print("Enter your last name: ");
     String lastName = s.nextLine();
-
-    // test output
-    System.out.println("Hello " + (firstName) + getInital(lastName) + (favnum));
-
-    s.close();
-  } // end main method
-
+    
+    System.out.print("Are you a student or teacher?");
+    String question = s.nextLine(); 
+    if (question .equals ("student")){     
+    System.out.println("Hello " + (firstName) + getInital(lastName) + (favnum) + "@nycstudents.net");        
+    }
+    if (question .equals ("teacher")){
+    System.out.println("Hello " + getInital(firstName) + (lastName) + (favnum) + "@schools.nyc.gov");
+    }
+  }    // end main method
   /*
    * Name: get initial
    * Purpose: send back the first character (inital) of a name
@@ -27,5 +30,5 @@ public class UserName {
    */
   public static String getInital(String n) {
     return n.substring(0, 1);
-  } // end initialize method
-}
+  }
+}  
